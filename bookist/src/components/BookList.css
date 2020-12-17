@@ -1,7 +1,7 @@
 .book-container {
   float: left;
   display: flex;
-  width: 75%;
+  width: 80%;
   height: 100vh;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -13,11 +13,11 @@
 }
 
 .book {
-  width: 200px;
-  padding: 0 10px;
+  width: 180px;
+  padding: 0 5px;
   margin-bottom: 20px;
 }
 
 img {
-  height: 200px;
+  height: 160px;
 }
