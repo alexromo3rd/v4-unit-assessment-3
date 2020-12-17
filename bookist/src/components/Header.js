@@ -1,8 +1,9 @@
 import React from 'react';
+import './Header.css';
 
 function Header () {
   return(
-    <h1>booklist</h1>
+    <h1 id='header'>booklist</h1>
   )
 }
 

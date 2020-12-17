@@ -27,23 +27,33 @@ class App extends Component {
     })
   }
 
-  addToShelf() {
+  addToShelf(e) {
+    let clickedBook = this.state.books.filter(book => e.target.src === book.img);
 
+    if(!this.state.shelf.includes(e.target.alt)) {
+      this.setState({
+        shelf: [...this.state.shelf, clickedBook[0].title]
+      })
+    }
   }
 
   clearShelf() {
     this.setState({
       shelf: []
     })
-    console.log('Shelf was cleared');
   }
 
-  filterBooks() {
-
+  filterBooks(input) {
+    let filteredBooks = this.state.books.filter(book => book.title.toLowerCase().includes(input));
+    this.setState({
+      books: filteredBooks
+    })
   }
 
   reset() {
-
+    this.setState({
+      books: data
+    })
   }
 
   render() {
